@@ -1,0 +1,11 @@
+.Channels{
+    width: 100%;
+    padding: 10px 2%;
+    background-color: #0D0E10;
+    display: flex;
+    column-gap: 10px;
+    height: 140.9px;
+}
+.Channels > img{
+    height: 95%;
+}

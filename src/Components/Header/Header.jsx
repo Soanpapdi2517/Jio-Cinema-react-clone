@@ -1,8 +1,9 @@
 import styles from "./Header.module.css";
 import JcLogo from "../../../assets/jc_logo_v2.svg";
-import crown from "../../../assets/Screenshot 2025-02-06 211412.png";
+import crown from "../../../assets/crown.svg";
 import searchIcon from "../../../assets/ic_search.svg";
 import voiceSearch from "../../../assets/voice-search.svg";
+import profileAvatar from "../../../assets/personImage.svg";
 const Header = () => {
   const navLinks = ["Home", "Sports", "Movies", "TV Shows", "More"];
   return (
@@ -24,12 +25,21 @@ const Header = () => {
       </nav>
       <div className={styles.SearchArea}>
         <div className={styles.SearchBox}>
-          <div></div>
-          <img src={searchIcon} alt="search" className={styles.SearchIcon}/>
-          <input type="text" placeholder="Movies, Shows and more..." className={styles.inputBox}/>
-          <img src={voiceSearch} alt="voice-search" className={styles.VoiceSearchIcon} />
+          <div className={styles.SearchIcon}>
+            <img src={searchIcon} alt="search" />
+          </div>
+
+          <input
+            type="text"
+            placeholder="Movies, Shows and more..."
+            className={styles.inputBox}
+          />
+          <div className={styles.SearchIcon}>
+            <img src={voiceSearch} alt="voice-search" />
+          </div>
         </div>
       </div>
+      <img src={profileAvatar} alt="" className={styles.personIcon} />
     </header>
   );
 };
