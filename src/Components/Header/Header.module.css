@@ -1,0 +1,105 @@
+.Header{
+    color: blue;
+    width: 100%;
+    height: 72px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+
+}
+.Navigation{
+    width: fit-content;
+    height: 70px;
+    /* background-color: aqua; */
+    display: flex;
+    column-gap: 30px;
+}
+
+.SearchArea{
+    width: 30%;
+    height: 70px;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+}
+.SearchBox{
+    width: 350px;
+    height: 45px;
+    background-color: gray;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+.SearchIcon{
+    border-radius: 15px 0 0 15px;
+    height: 21px;
+}
+.inputBox{
+    height: 100%;
+    width: 70%;
+    font-size: 16px;
+    font-weight: bold;
+}
+.inputBox{
+    height: 100%;
+    width: 70%;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+.VoiceSearchIcon{
+    border-radius: 15px 15px 0 0;
+    height: 21px;
+    padding: 0 0 0 15px
+}
+.premium{
+    width: fit-content;
+    border: 2px solid gold;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: gold;
+    font-weight: bold;
+    display: flex;
+    column-gap: 5px;
+}
+
+.logo{
+    /* background-color: grey; */
+    width: fit-content;
+    display: flex;
+    column-gap: 4%;
+    align-items: center;
+}
+
+.navlinks{
+    width: fit-content;
+    display: flex;
+    list-style: none;
+    column-gap: 20px;
+    color: white;
+    align-items: center;
+}
+.navlink{
+    padding: 21px 0;
+    color: rgba(255, 255, 255, 0.904);
+}
+.navlink:active{    
+    border-bottom: 4px solid #d9008d;
+    padding: 21px 0;
+    color: rgb(255, 255, 255);
+}
+.navlink:hover{    
+    color: rgb(255, 255, 255);
+    padding: 21px 0;
+}
+.crown{
+    height: 19px;
+}
+.jcLogo{
+    height: 50%;
+}
+
