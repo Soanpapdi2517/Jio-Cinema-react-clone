@@ -35,18 +35,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     background-color: #5f5e5e;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    opacity: 0; /* Hide by default */
+    pointer-events: none; /* Prevent interaction when hidden */
 }
 .ArrowTags:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     background-color: #959595;
     border-radius: 50%;
+}
+
+.tags:hover .ArrowTags{
+    opacity: 1; /* Show on hover */
+    pointer-events: auto; /* Enable interaction */
 }

@@ -1,0 +1,54 @@
+.Featured{
+    width: 100%;
+    height: 400px;
+    background-color: #0D0E10;
+}
+.Title{
+    width: 100%;
+    height: 44.75px;
+    padding: 0 24px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+.FeaturedContainer{
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+}
+.FeaturedContainer:hover .ArrowTags {
+    opacity: 1; /* Show on hover */
+    pointer-events: auto; /* Enable interaction */
+}
+.imageContainer{
+    display: flex;
+    height: 307px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 24px;
+
+}
+.ArrowTags{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: #5f5e5e;
+    border-radius: 50%;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    opacity: 0; /* Hide by default */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+.ArrowTags:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: #959595;
+    border-radius: 50%;
+}
+.shows{
+    border-radius: 10px;
+}

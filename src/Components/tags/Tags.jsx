@@ -25,8 +25,8 @@ const Tags = () => {
         <img src={arrowLeft} alt="" />
         </div>
         
-        {tagsArr.map((posts) => (
-          <button className={styles.tagArr}>{posts}</button>
+        {tagsArr.map((tags) => (
+          <button key={tags} className={styles.tagArr}>{tags}</button>
         ))}
         <div className={styles.ArrowTags}>
         <img src={arrowRight} alt="" />

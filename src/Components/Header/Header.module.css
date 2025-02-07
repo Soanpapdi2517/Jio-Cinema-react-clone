@@ -67,7 +67,7 @@
     background-color: rgba(58, 52, 43, 1);
     outline: none;
 }
-.premium{
+.premium {
     width: fit-content;
     border: 2px solid gold;
     padding: 5px 15px;
@@ -76,6 +76,7 @@
     color: gold;
     font-weight: bold;
     display: flex;
+    align-items: center; /* Center vertically */
     column-gap: 5px;
 }
 

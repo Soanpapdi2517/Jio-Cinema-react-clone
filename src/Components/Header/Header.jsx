@@ -13,13 +13,15 @@ const Header = () => {
           <img src={JcLogo} alt="Jio Cinema logo" className={styles.jcLogo} />
           <div className={styles.premium}>
             <img src={crown} alt="" className={styles.crown} />
-            <p>GoPremium</p>
+            <span>GoPremium</span>
           </div>
         </div>
 
         <ul className={styles.navlinks}>
           {navLinks.map((links) => (
-            <li className={styles.navlink}>{links}</li>
+            <li key={links} className={styles.navlink}>
+              {links}
+            </li>
           ))}
         </ul>
       </nav>
