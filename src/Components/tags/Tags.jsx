@@ -1,9 +1,10 @@
 import { useState } from "react";
 import styles from "./tags.module.css";
-import arrowLeft from "../../../assets/arrow-left.svg"
-import arrowRight from "../../../assets/arrow-right.svg"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const Tags = () => {
-  const [tagsArr, setTagsArr] = useState([
+  const [tagsArr] = useState([
     "For You",
     "Premium",
     "Laughter Chefs",
@@ -18,21 +19,52 @@ const Tags = () => {
     "FREE Anime",
     "ISL",
   ]);
+
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 10,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
-    <>
-      <div className={styles.tags}>
-        <div className={styles.ArrowTags}>
-        <img src={arrowLeft} alt="" />
-        </div>
-        
-        {tagsArr.map((tags) => (
-          <button key={tags} className={styles.tagArr}>{tags}</button>
+    <div className={styles.TagsMain}>
+    <div className={styles.tags}>
+      <Slider {...settings} >
+
+        {tagsArr.map((tags, index) => (
+          <button key={index} className={styles.tagArr}>{tags}</button>
         ))}
-        <div className={styles.ArrowTags}>
-        <img src={arrowRight} alt="" />
-        </div>
-      </div>
-    </>
+      </Slider>
+    </div>
+    </div>
   );
 };
 

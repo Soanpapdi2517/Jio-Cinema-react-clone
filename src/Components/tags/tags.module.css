@@ -1,18 +1,18 @@
-.tags{
+.TagsMain{
     width: 100%;
-    height: 76px;
+}
+.tags{
+    margin: 1% 0;
     background-color: #0D0E10;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 0 4%;
+    overflow: visible;
+/* Ensure buttons are visible */
     /* position: fixed;
     top: 73px; */
 }
-
 .tagArr{
     height: 36px;
-    padding: 0px 12px;
     width: fit-content;
     border-radius: 18px;
     border: none;
@@ -29,31 +29,4 @@
     border: none;
     font-weight: bold;
     background-color: #5f5e5e;
-}
-
-.ArrowTags{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    background-color: #5f5e5e;
-    border-radius: 50%;
-    transition: opacity 0.3s ease, background-color 0.3s ease;
-    opacity: 0; /* Hide by default */
-    pointer-events: none; /* Prevent interaction when hidden */
-}
-.ArrowTags:hover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    background-color: #959595;
-    border-radius: 50%;
-}
-
-.tags:hover .ArrowTags{
-    opacity: 1; /* Show on hover */
-    pointer-events: auto; /* Enable interaction */
 }

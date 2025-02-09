@@ -5,7 +5,7 @@ import Featured from "../Components/Featured/Featured";
 import Header from "../Components/Header/Header";
 import ShowsList from "../Components/ShowsList/ShowsList";
 import Spotlight from "../Components/Spotlight/Spotlight";
-import Tags from "../Components/tags/tags";
+import Tags from "../Components/tags/Tags";
 
 const Home = () => {
   const showsTitles = [
@@ -62,9 +62,6 @@ const Home = () => {
       console.log(err);
     }
   }, []);
-  console.log(englishContent);
-  console.log(topPicks);
-  console.log(thrillerContent);
   return (
     <>
       <Header></Header>

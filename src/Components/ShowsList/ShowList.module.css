@@ -14,37 +14,11 @@
 .FeaturedContainer{
     display: flex;
     align-items: center;
-    padding: 0 1%;
-}
-.FeaturedContainer:hover .ArrowTags {
-    opacity: 1; /* Show on hover */
-    pointer-events: auto; /* Enable interaction */
+    padding: 0 4%;
 }
 .imageContainer{
     display: flex;
     height: 307px;
     width: 100%;
-    padding: 16px 24px;
-
-}
-.ArrowTags{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    background-color: #5f5e5e;
-    border-radius: 50%;
-    transition: opacity 0.3s ease, background-color 0.3s ease;
-    opacity: 0; /* Hide by default */
-    pointer-events: none; /* Prevent interaction when hidden */
-}
-.ArrowTags:hover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    background-color: #959595;
-    border-radius: 50%;
+    padding: 0 1%;
 }
