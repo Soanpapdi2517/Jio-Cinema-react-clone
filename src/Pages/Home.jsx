@@ -13,6 +13,7 @@ const Home = () => {
     "Top Picks For You",
     "Must Watch Movies",
   ];
+  const [seriesData, setSeriesData] = useState([]);
   const [data, setData] = useState({ movies: [], anime: [] });
   const [featuredContent, setFeaturedContent] = useState([]);
   const [englishContent, setEnglishContent] = useState([]);
@@ -24,8 +25,10 @@ const Home = () => {
       Promise.all([
         fetch("http://localhost:5000/movies").then((res) => res.json()),
         fetch("http://localhost:5000/anime").then((res) => res.json()),
-      ]).then(([moviesData, animeData]) => {
+        fetch("http://localhost:5000/series").then((res) => res.json()),
+      ]).then(([moviesData, animeData, seriesData]) => {
         setData({ movies: moviesData, anime: animeData });
+        setSeriesData(seriesData);
 
         // filters for movies featured
         let featuredMovies = moviesData.filter((movie) => movie.featured);
@@ -35,28 +38,18 @@ const Home = () => {
         let englishMovies = moviesData.filter((movies) =>
           movies.language.includes("English")
         );
-        let EnglishAnime = animeData.filter((anime) =>
-          anime.language.includes("English")
-        );
-        setEnglishContent([...englishMovies, ...EnglishAnime]);
+        setEnglishContent([...englishMovies]);
         // filters for movies, anime Top picks
         let topMovies = moviesData.filter((movies) => {
-          return movies.imdb_rating >= 8.5
+          return movies.imdb_rating >= 7;
         });
-        let topAnime = animeData.filter((anime) => {
-          return anime.imdb_rating >= 8.5
-        });
-        setTopPicks([...topMovies, ...topAnime]);
-
+        setTopPicks([...topMovies]);
 
         // filters for movies, anime Action
         let englishActionMovies = moviesData.filter((movies) =>
-          movies.genre.includes("Thriller")
+          movies.genre.includes("Drama")
         );
-        let EnglishActionAnime = animeData.filter((anime) =>
-          anime.genre.includes("Thriller")
-        );
-        setThrillerContent([...englishActionMovies, ...EnglishActionAnime]);
+        setThrillerContent([...englishActionMovies]);
       });
     } catch (err) {
       console.log(err);
@@ -66,12 +59,16 @@ const Home = () => {
     <>
       <Header></Header>
       <Tags></Tags>
-      <Carousel></Carousel>
+      <Carousel SeriesData={seriesData}></Carousel>
       <Channel />
       <Spotlight></Spotlight>
-      <Featured Featured = {featuredContent}></Featured>
+      <Featured FeaturedData={featuredContent}></Featured>
       {showsTitles.map((titles, index) => (
-        <ShowsList key={index} Titles={titles} Content={content[index]}></ShowsList>
+        <ShowsList
+          key={index}
+          Titles={titles}
+          Content={content[index]}
+        ></ShowsList>
       ))}
     </>
   );

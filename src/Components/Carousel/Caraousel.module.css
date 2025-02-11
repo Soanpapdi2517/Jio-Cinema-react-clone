@@ -1,5 +1,15 @@
 .Carousel{
     width: 100%;
-    height: 35rem;
+    height: 30rem;
     background-color: #0D0E10;
+}
+.SeriesContainer{
+    margin: 8% 2%;
+    display: flex;
+}
+.imagesContainer{
+    color: #0D0E10;
+    height: 24rem;
+    width: 100%;
+    padding: 0 2%;
 }

@@ -28,7 +28,7 @@ const Header = () => {
       <div className={styles.SearchArea}>
         <div className={styles.SearchBox}>
           <div className={styles.SearchIcon}>
-            <img src={searchIcon} alt="search" />
+            <img className={styles.icon} src={searchIcon} alt="search" />
           </div>
 
           <input
@@ -37,7 +37,7 @@ const Header = () => {
             className={styles.inputBox}
           />
           <div className={styles.SearchIcon}>
-            <img src={voiceSearch} alt="voice-search" />
+            <img className={styles.icon} src={voiceSearch} alt="voice-search" />
           </div>
         </div>
       </div>

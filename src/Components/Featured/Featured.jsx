@@ -1,7 +1,7 @@
 import styles from "./Featured.module.css";
 import FeaturedShow from "../FeaturedShow/FeaturedShow";
 import Slider from "react-slick";
-const Featured = ({Featured}) => {
+const Featured = ({FeaturedData}) => {
   var settings = {
     dots: true,
     infinite: false,
@@ -42,7 +42,7 @@ const Featured = ({Featured}) => {
         <h1 className={styles.Title}>Hot Right Now ️‍🔥</h1>
         <div className={styles.FeaturedContainer}>
           <Slider {...settings} className={styles.imageContainer}>
-            {Featured.map((data, index) => (
+            {FeaturedData.map((data, index) => (
               <FeaturedShow Singledata={data} key={index}></FeaturedShow>
             ))}
             
