@@ -57,7 +57,7 @@ const Tags = () => {
   return (
     <div className={styles.TagsMain}>
     <div className={styles.tags}>
-      <Slider {...settings} >
+      <Slider {...settings}  className={styles.tagsWrapper}>
 
         {tagsArr.map((tags, index) => (
           <button key={index} className={styles.tagArr}>{tags}</button>

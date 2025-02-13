@@ -1,5 +1,7 @@
 .TagsMain{
     width: 100%;
+     position: relative;
+    top: 71px;
 }
 .tags{
     margin: 1% 0;
@@ -8,10 +10,11 @@
     padding: 0 4%;
     overflow: visible;
 /* Ensure buttons are visible */
-    /* position: fixed;
+ /* position: fixed;
     top: 73px; */
 }
 .tagArr{
+    margin-right: 10px; /* Adjust as needed */
     height: 36px;
     width: fit-content;
     border-radius: 18px;

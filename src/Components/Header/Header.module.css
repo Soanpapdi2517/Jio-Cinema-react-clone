@@ -9,8 +9,9 @@
     align-items: center;
     padding: 0 4%;
     border-bottom: 1px solid #343536;
-    /* position: fixed;
-    top: 0; */
+    position: fixed;
+    top: 0;
+    z-index: 15;
 }
 .Navigation{
     width: fit-content;
@@ -134,7 +135,7 @@
     height: 80vh;
     width: 419px;
     background-color: rgba(58, 52, 43, 0.5);
-    position: absolute;
+    position: fixed;
     z-index: 10;
     right: 87px;
     top: 59px;
