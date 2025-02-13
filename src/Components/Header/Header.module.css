@@ -130,3 +130,18 @@
 .icon{
     background-color: #0d0e1000;
 }
+.SearchResult{
+    height: 80vh;
+    width: 419px;
+    background-color: rgba(58, 52, 43, 0.5);
+    position: absolute;
+    z-index: 10;
+    right: 87px;
+    top: 59px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}

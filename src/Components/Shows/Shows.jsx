@@ -1,7 +1,6 @@
 import styles from "./Shows.module.css";
 
 const Shows = ({ SingleShow }) => {
-  console.log(SingleShow);
   return (
     <div className={styles.showContainer}>
       <img

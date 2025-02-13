@@ -14,7 +14,7 @@ const Home = () => {
     "Must Watch Movies",
   ];
   const [seriesData, setSeriesData] = useState([]);
-  const [data, setData] = useState({ movies: [], anime: [] });
+  const [data, setData] = useState({ movies: [], anime: [] , series: []});
   const [featuredContent, setFeaturedContent] = useState([]);
   const [englishContent, setEnglishContent] = useState([]);
   const [topPicks, setTopPicks] = useState([]);
@@ -27,7 +27,7 @@ const Home = () => {
         fetch("http://localhost:5000/anime").then((res) => res.json()),
         fetch("http://localhost:5000/series").then((res) => res.json()),
       ]).then(([moviesData, animeData, seriesData]) => {
-        setData({ movies: moviesData, anime: animeData });
+        setData({ movies: moviesData, anime: animeData , series: seriesData});
         setSeriesData(seriesData);
 
         // filters for movies featured
@@ -57,7 +57,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <Header></Header>
+      <Header content ={data}></Header>
       <Tags></Tags>
       <Carousel SeriesData={seriesData}></Carousel>
       <Channel />
