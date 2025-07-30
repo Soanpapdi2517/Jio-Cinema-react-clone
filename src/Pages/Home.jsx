@@ -23,9 +23,9 @@ const Home = () => {
   useEffect(() => {
     try {
       Promise.all([
-        fetch("http://localhost:5000/movies").then((res) => res.json()),
-        fetch("http://localhost:5000/anime").then((res) => res.json()),
-        fetch("http://localhost:5000/series").then((res) => res.json()),
+        fetch("https://jio-cinema-clone.onrender.com/movies").then((res) => res.json()),
+        fetch("https://jio-cinema-clone.onrender.com/anime").then((res) => res.json()),
+        fetch("https://jio-cinema-clone.onrender.com/series").then((res) => res.json()),
       ]).then(([moviesData, animeData, seriesData]) => {
         setData({ movies: moviesData, anime: animeData , series: seriesData});
         setSeriesData(seriesData);
