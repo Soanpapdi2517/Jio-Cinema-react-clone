@@ -7,7 +7,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/Jio-Cinema-react-clone/" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
         </Routes>
       </BrowserRouter>
     </>
